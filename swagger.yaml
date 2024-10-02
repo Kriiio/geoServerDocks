@@ -1,0 +1,43 @@
+basePath: /
+host: localhost:8080
+info:
+  contact: {}
+  description: API server for GeoSearching
+  title: Swagger API
+  version: "1.0"
+paths:
+  /geocode:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: lat, lng
+        in: body
+        name: input
+        required: true
+        schema:
+          type: string
+      produces:
+      - application/json
+      responses: {}
+      summary: Geocode
+      tags:
+      - GeoSearch
+  /search:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: query
+        in: body
+        name: input
+        required: true
+        schema:
+          type: string
+      produces:
+      - application/json
+      responses: {}
+      summary: Search
+      tags:
+      - GeoSearch
+swagger: "2.0"
